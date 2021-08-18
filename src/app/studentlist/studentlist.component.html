@@ -1,0 +1,41 @@
+<div class="bs-example container">
+    <div class="mt-3">
+     <a routerLink="/student/0" class="btn btn-success float-end">Add Students</a>
+ 
+     <h1 class="pb-3 mb-4">All Students</h1>
+     
+    </div>
+    <div class="row">
+        <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Firstname</th>
+                <th scope="col">Lastname</th>
+                <th scope="col">Mobile</th>
+                <th scope="col">Address</th>
+                <th scope="col">Department</th>
+                <th scope="col">Action</th>
+              
+              </tr>
+            </thead>
+            <tbody>
+                
+                <tr *ngFor="let stud of students">
+                   
+                    <td>{{1}}</td>
+                    <td>{{ stud.firstname }}</td>
+                    <td>{{ stud.lastname }}</td>
+                    <td>{{ stud.mobile }}</td>
+                    <td>{{ stud.address }}</td>
+                    <td>{{ stud.department }}</td>
+                    <td> <a class="btn btn-primary" (click)="editStudent(stud.id)">Edit</a>
+                        <a class="btn btn-danger"  (click)="deleteStudent(stud.id)">Delete</a>
+                    </td>
+      
+                  </tr>
+             
+            </tbody>
+          </table>
+    </div>
+</div>
